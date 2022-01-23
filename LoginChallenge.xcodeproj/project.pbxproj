@@ -10,6 +10,8 @@
 		09C0D70C279C66C500990047 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D709279C66C500990047 /* LoginModel.swift */; };
 		09C0D70D279C66C500990047 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D70A279C66C500990047 /* LoginViewController.swift */; };
 		09C0D70E279C66C500990047 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D70B279C66C500990047 /* LoginPresenter.swift */; };
+		09C0D712279D0CBD00990047 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D711279D0CBD00990047 /* LoginTests.swift */; };
+		09C0D714279D89E900990047 /* XCTest+async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C0D713279D89E800990047 /* XCTest+async.swift */; };
 		D6673300279ABE8C00CC8AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66732FF279ABE8C00CC8AB3 /* AppDelegate.swift */; };
 		D6673302279ABE8C00CC8AB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6673301279ABE8C00CC8AB3 /* SceneDelegate.swift */; };
 		D6673307279ABE8C00CC8AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6673305279ABE8C00CC8AB3 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		09C0D709279C66C500990047 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		09C0D70A279C66C500990047 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		09C0D70B279C66C500990047 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		09C0D711279D0CBD00990047 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		09C0D713279D89E800990047 /* XCTest+async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+async.swift"; sourceTree = "<group>"; };
 		D66732FC279ABE8C00CC8AB3 /* LoginChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66732FF279ABE8C00CC8AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6673301279ABE8C00CC8AB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				D6673316279ABE8F00CC8AB3 /* LoginChallengeTests.swift */,
+				09C0D711279D0CBD00990047 /* LoginTests.swift */,
+				09C0D713279D89E800990047 /* XCTest+async.swift */,
 			);
 			path = LoginChallengeTests;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6673317279ABE8F00CC8AB3 /* LoginChallengeTests.swift in Sources */,
+				09C0D714279D89E900990047 /* XCTest+async.swift in Sources */,
+				09C0D712279D0CBD00990047 /* LoginTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
