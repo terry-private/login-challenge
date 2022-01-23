@@ -13,12 +13,8 @@ import XCTest
 private final class LoginModelMock: LoginModelProtocol {
     private var loginCallBack: (() async throws -> Void)?
     func logInWith(id: String, password: String) async throws {
-        do {
-            try await Task.sleep(nanoseconds: 100_000_000)
-            try await loginCallBack?()
-        } catch {
-            throw error
-        }
+        try await Task.sleep(nanoseconds: 100_000_000)
+        try await loginCallBack?()
     }
     init(loginCallBack: (() async throws -> Void)? = nil) {
         self.loginCallBack = loginCallBack
@@ -57,11 +53,11 @@ class LoginTests: XCTestCase {
             let presenter = LoginPresenter(view: view, model: model)
             await presenter.loginButtonPressed(id: view.id, password: view.password)
             // アンラップしながらnilチェック
-            //「インジケータ表示」「非表示」「アラート表示」が実行されたかどうかの確認もしている。
+            //「インジケータ表示」「非表示」「Homeへ遷移」が実行されたかどうかの確認もしている。
             let showIndicatorAt = try XCTUnwrap(view.showIndicatorAt)
             let closeIndicatorAt = try XCTUnwrap(view.closeIndicatorAt)
             let transitionToHomeViewAt = try XCTUnwrap(view.transitionToHomeViewAt)
-            // 「インジケータ表示」⇨「非表示」⇨「アラート表示」の順になっているかどうか"
+            // 「インジケータ表示」⇨「非表示」⇨「Homeへ遷移」の順になっているかどうか"
             XCTAssertLessThan(showIndicatorAt, closeIndicatorAt)
             XCTAssertLessThan(closeIndicatorAt, transitionToHomeViewAt)
         }
